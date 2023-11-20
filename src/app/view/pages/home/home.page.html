@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title id="title"><ion-icon name='skull-outline'></ion-icon>
+
+      ARMAMENTOS
+      <ion-icon name='skull-outline'></ion-icon></ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-list *ngFor="let arma of this.Armamentos; let i = index">
+      <ion-item (click)="editar(arma)">
+        <ion-avatar><img src="{{arma.downloadURL}}"></ion-avatar>
+        <ion-label>{{ arma.nome }}</ion-label><ion-icon name='caret-back-circle-outline'></ion-icon>
+
+      </ion-item>
+    </ion-list>
+
+    <ion-fab horizontal="end" vertical="bottom">
+      <ion-fab-button color="success" (click)="irParaCadastro()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+</ion-content>

@@ -1,0 +1,25 @@
+ion-content {
+  --background: #f4f4f4; /* Cor de fundo para o conteúdo */
+  padding: 20px; /* Espaçamento interno do conteúdo */
+
+  ion-card {
+    background-color: #fff; /* Cor de fundo dos cards */
+    margin-bottom: 20px; /* Espaçamento inferior entre os cards */
+    border-radius: 8px; /* Borda arredondada nos cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra nos cards */
+  }
+
+  ion-card-header {
+    --color: #333; /* Cor do texto no cabeçalho dos cards */
+    font-weight: bold; /* Texto em negrito no cabeçalho dos cards */
+  }
+
+  ion-card-content {
+    --color: #666; /* Cor do texto no conteúdo dos cards */
+  }
+}
+
+ion-toolbar {
+  --background: #2c3e50; /* Cor da barra de título */
+  --color: #fff; /* Cor do texto da barra de título */
+}

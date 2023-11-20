@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Armamentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-list>
+    <ion-item>
+      <ion-toggle color="success" (ionChange)="habilitar()">Habilitar Edição</ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Nome" placeholder="Insira o nome" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Capacidade" type="number" placeholder="Insira a capacidade de munição" [(ngModel)]="capacidade"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Potencia" type="text" placeholder="Insira a Potencia do armamamento" [(ngModel)]="potencia"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Categoria" placeholder="Selecione" [(ngModel)]="categoria">
+        <ion-select-option value="0">Rifle</ion-select-option>
+        <ion-select-option value="1">Submetralhadora</ion-select-option>
+        <ion-select-option value="2">Pistola</ion-select-option>
+        <ion-select-option value="3">Rifle de precisão</ion-select-option>
+        <ion-select-option value="4">Arma branca</ion-select-option>
+        <ion-select-option value="5">Metralhadora</ion-select-option>
+        <ion-select-option value="6">Anti-Aérea</ion-select-option>
+        <ion-select-option value="7">Explosivo</ion-select-option>
+        <ion-select-option value="8">Lança Granadas</ion-select-option>
+        <ion-select-option value="9">Lança Misseis</ion-select-option>
+        <ion-select-option value="10">Escopetas</ion-select-option>
+        <ion-select-option value="11">Airsoft</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Calibre" placeholder="Selecione" [(ngModel)]="calibre">
+        <ion-select-option value="0">5.56</ion-select-option>
+        <ion-select-option value="1">7.62</ion-select-option>
+        <ion-select-option value="2">.40</ion-select-option>
+        <ion-select-option value="3">.50</ion-select-option>
+        <ion-select-option value="4">.38</ion-select-option>
+        <ion-select-option value="5">.357</ion-select-option>
+        <ion-select-option value="6">Míssel</ion-select-option>
+        <ion-select-option value="7">Outro</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <img src="{{this.arma.downloadURL}}" />
+    <ion-item>
+      <ion-button size="default" color="success" shape="round" disabled="{{edicao}}">
+        <input type="file" (change)="uploadFile($event.target)" />
+      </ion-button>
+    </ion-item>
+    
+  </ion-list>
+  
+  <ion-button expand="full" color="success" (click)="editar()" disabled={{edicao}}>Salvar</ion-button>
+  <ion-button expand="full" (click)="excluir()" color="danger" disabled={{edicao}}>Excluir</ion-button>
+
+</ion-content>

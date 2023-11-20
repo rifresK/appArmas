@@ -1,0 +1,27 @@
+ion-content {
+    --background: #f4f4f4; /* Cor de fundo para o conteúdo */
+  
+    ion-list {
+      ion-item {
+        ion-label {
+          color: #333; /* Cor do texto dos rótulos */
+        }
+      }
+  
+      ion-button {
+        margin-top: 20px; /* Espaçamento superior entre botões */
+      }
+    }
+  
+    img {
+      max-width: 100%; /* Imagens com largura máxima */
+      display: block; /* Garante que a imagem não tenha margens indesejadas */
+      margin-top: 20px; /* Espaçamento superior para imagens */
+    }
+  }
+  
+  ion-toolbar {
+    --background: #2c3e50; /* Cor da barra de título */
+    --color: #fff; /* Cor do texto da barra de título */
+  }
+  

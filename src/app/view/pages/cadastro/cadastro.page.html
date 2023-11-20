@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      ARMAMENTOS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form [formGroup]="formulario" (ngSubmit)="cadastro()">
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input formControlName="nome" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Capacidade</ion-label>
+        <ion-input formControlName="capacidade" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Potência</ion-label>
+        <ion-input formControlName="potencia" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Categoria</ion-label>
+        <ion-select formControlName="categoria">
+          <ion-select-option value="0">Rifle</ion-select-option>
+          <ion-select-option value="1">Submetralhadora</ion-select-option>
+          <ion-select-option value="2">Pistola</ion-select-option>
+          <ion-select-option value="3">Rifle de precisão</ion-select-option>
+          <ion-select-option value="4">Arma branca</ion-select-option>
+          <ion-select-option value="5">Metralhadora</ion-select-option>
+          <ion-select-option value="6">Anti-Aérea</ion-select-option>
+          <ion-select-option value="7">Explosivo</ion-select-option>
+          <ion-select-option value="8">Lança Granadas</ion-select-option>
+          <ion-select-option value="9">Lança Mísseis</ion-select-option>
+          <ion-select-option value="10">Escopetas</ion-select-option>
+          <ion-select-option value="11">Airsoft</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Calibre</ion-label>
+        <ion-select formControlName="calibre">
+          <ion-select-option value="0">5.56</ion-select-option>
+          <ion-select-option value="1">7.62</ion-select-option>
+          <ion-select-option value="2">9mm</ion-select-option>
+          <ion-select-option value="3">38</ion-select-option>
+          <ion-select-option value="4">357</ion-select-option>
+          <ion-select-option value="5">.50</ion-select-option>
+          <ion-select-option value="6">Arma Branca</ion-select-option>
+
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Imagem</ion-label>
+        <ion-input type="file" (change)="uploadFile($event)"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-button expand="full" type="submit">Cadastrar</ion-button>
+
+  </form>
+
+</ion-content>

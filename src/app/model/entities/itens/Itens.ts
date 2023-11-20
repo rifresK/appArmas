@@ -6,7 +6,7 @@ export class Itens {
     private _calibre! : number;
     private _id!: string;
     private _downloadURL! : any;
-
+    private _uid! : string;
     constructor(nome : string, potencia : string){
         this._nome = nome;
         this._potencia = potencia;
@@ -80,5 +80,12 @@ export class Itens {
       public set downloadURL(value : any){
         this._downloadURL = value;
       }
+      public get uid(): string {
+        return this._uid;
+    }
+    
+    public set uid(value: string) {
+        this._uid = value;
+    }
     
 }
